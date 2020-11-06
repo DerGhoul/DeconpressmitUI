@@ -1,0 +1,58 @@
+﻿<Window x:Class="DecompressmitUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DecompressmitUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid KeyDown="KeyDown" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        
+        
+        <Button Content="Decompress Files" FontSize="30" Grid.Column="1" Grid.Row="0" FontFamily="Sans Forgetica" Click="decompress_Click" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.200,1.000" StartPoint="0.800,0.000" >
+                    <GradientStop Color="#9e7bb3" />
+                    <GradientStop Color="#78ab86" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>            
+        </Button>
+
+        <TextBox Grid.Row="1" Grid.Column="0" FontFamily="Sans Forgetica" TextWrapping="Wrap" x:Name="desPath" >
+            <TextBox.Background>
+                <LinearGradientBrush StartPoint="0.2,1.0" EndPoint="0.8,0.0">
+                    <GradientStop Color="#9e7bb3" />
+                    <GradientStop Color="#78ab86" Offset="1" />
+                </LinearGradientBrush>
+            </TextBox.Background>        
+        </TextBox>           
+
+        <TextBox FontFamily="Sans Forgetica" TextWrapping="Wrap" x:Name="sourcePath" Grid.Row="0"  >
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.800,1" StartPoint="0.200,0.000"   >
+                    <GradientStop Color="#9e7bb3"/>
+                    <GradientStop Color="#78ab86" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        
+        <TextBlock x:Name="ausgabe" Grid.Column="1" Grid.Row="1" FontFamily="Sans Forgetica" FontSize="11" >
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.200,0.000" StartPoint="0.800,1.000">
+                    <GradientStop Color="#9e7bb3"/>
+                    <GradientStop Color="#78ab86" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+         
+    </Grid>
+</Window>
